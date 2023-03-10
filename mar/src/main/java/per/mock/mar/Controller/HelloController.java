@@ -14,4 +14,10 @@ public class HelloController {
         
         return "hello,world";
     }
+
+    @GetMapping("/getWeather")
+    public String getBeijingWeather() {
+
+        return "OK";
+    }
 }
