@@ -4,20 +4,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import per.mock.mar.Common.Response.ErrorCode;
+import per.mock.mar.Common.Response.R;
 
 @RestController
 @RequestMapping("/hello")
 public class HelloController {
-    
+
     @GetMapping("/world")
-    public String getKeyString(){
-        
-        return "hello,world";
+    public R getKeyString() {
+
+        return R.success("hello,world");
     }
 
     @GetMapping("/getWeather")
-    public String getBeijingWeather() {
+    public R getBeijingWeather() {
 
-        return "OK";
+        return R.fail("Please retry");
     }
 }
